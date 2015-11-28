@@ -163,9 +163,12 @@ public class evaluateSuffixExpression {
 					case '/':
 						operand2 = numbers.pop();
 						operand1 = numbers.pop();
-						//可能发生除以零的情况，结果可以是常量
-						numbers.push(operand1 / operand2);
-						break;
+						if (operand2 != 0) {
+							numbers.push(operand1 / operand2);
+							break;
+						}
+						else
+							throw new IllegalArgumentException("Can't divided by 0.");
 				}
 			}
 		}		
