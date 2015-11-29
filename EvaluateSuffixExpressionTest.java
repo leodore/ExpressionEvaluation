@@ -1,4 +1,4 @@
-public class ExpressionEvaluationTest {
+public class EvaluateSuffixExpressionTest {
   public static void main(String[] args) {
   		System.out.println("Enter an arithmetic expression(supports + - * / operations):");
   		
