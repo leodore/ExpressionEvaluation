@@ -3,21 +3,11 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.regex.Pattern;
 
-public class evaluateSuffixExpression {
+public class EvaluateSuffixExpression {
 	
 	//匹配无符号double型数
 	private static final Pattern UNSIGNED_DOUBLE = Pattern.compile("((\\d+\\.?\\d*)|(\\.\\d+))(([Ee][+-]?)?\\d+)?.*?");
 	private static final Pattern OPERATOR = Pattern.compile("[+-/*].*?");
-
-	public static void main(String[] args) {
-		System.out.println("Enter an arithmetic expression(supports + - * / operations):");
-		
-		Scanner in = new Scanner(System.in);
-		String expression = in.nextLine();
-		in.close();		
-		double result = evaluateExpression(transferToSuffixExpression(expression));
-		System.out.println("The result of the expression is: " + result);
-	}
 
 	public static String transferToSuffixExpression(String expression) {
 		Stack<Character> operations = new Stack<>();
