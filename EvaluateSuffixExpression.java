@@ -100,7 +100,7 @@ public class EvaluateSuffixExpression {
 						while ((character = operations.pop()) != '(')
 							result.append(character + " ");
 					 } catch (EmptyStackException e) {    
-						 //右括号数多于左括号数
+						 //右括号数多于左括号数或者先出现右括号
 						 throw new RuntimeException("Illegal input expression.");
 					 }		
 				}		 
